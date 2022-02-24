@@ -4,12 +4,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="images/Logo.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="shortcut icon" href="./images/Logo.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <title>Fashion Driven</title>
   </head>
   <body>
-    <script src="scripts/main.js"></script>
+    <header>
+      <img src="./images/Logo.png" alt="Logo principal" />
+    </header>
+    <main>
+      <section>
+        <article>
+          <p>Escolha o modelo</p>
+          <div class="modelos">
+            <div class="image-box">
+              <img src="images/tshirt.png" alt="T-shirt" />
+            </div>
+            <div class="image-box"">
+              <img src="images/Camiseta.png" alt="Camiseta" />
+            </div>
+            <div class="image-box">
+              <img src="images/Mangalonga.png" alt="Mangalonga" />
+            </div>
+          </div>
+          <p>Escolha a gola</p>
+          <div class="golas">
+            <div class="image-box">
+              <img src="images/GolaV.png" alt="GolaV" />
+            </div>
+            <div class="image-box">
+              <img src="images/GolaRedonda.png" alt="GolaRedonda" />
+            </div>
+            <div class="image-box">
+              <img src="images/GolaPolo.png" alt="GolaPolo" />
+            </div>
+          </div>
+          <p>Escolha o tecido</p>
+          <div class="tecidos">
+            <div class="image-box">
+              <img src="images/Seda.png" alt="Seda" />
+            </div>
+            <div class="image-box">
+              <img src="images/Algodão.png" alt="Algodão" />
+            </div>
+            <div class="image-box">
+              <img src="images/Poliester.png" alt="Poliester" />
+            </div>
+          </div>
+          <p>Imagem de referência</p>
+          <input type="text" placeholder="Insira o link" />
+          <div>
+            <button>Confirmar pedido</button>
+          </div>
+        </article>
+      </section>
+      <aside>
+        <img src="./images/ilustração.png" />
+      </aside>
+    </main>
+    <footer>
+      <div class="ultimos-pedidos">
+        <p class="last-text">Últimos pedidos</p>
+        <div class="camisas">
+          <div class="camisa-box">
+            <!-- <img src="images/Blusa1.png" />
+            <p><strong>Criador:</strong>Agata</p> -->
+          </div>
+          <div class="camisa-box"></div>
+          <div class="camisa-box"></div>
+          <div class="camisa-box"></div>
+          <div class="camisa-box"></div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>
