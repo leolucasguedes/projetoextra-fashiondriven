@@ -24,44 +24,44 @@
         <article>
           <p>Escolha o modelo</p>
           <div class="modelos">
-            <div class="image-box">
+            <div class="image-box" onclick="selecionarCamisa(this)">
               <img src="images/tshirt.png" alt="T-shirt" />
             </div>
-            <div class="image-box"">
+            <div class="image-box" onclick="selecionarCamisa(this)">
               <img src="images/Camiseta.png" alt="Camiseta" />
             </div>
-            <div class="image-box">
+            <div class="image-box" onclick="selecionarCamisa(this)">
               <img src="images/Mangalonga.png" alt="Mangalonga" />
             </div>
           </div>
           <p>Escolha a gola</p>
           <div class="golas">
-            <div class="image-box">
+            <div class="image-box" onclick="selecionarGola(this)">
               <img src="images/GolaV.png" alt="GolaV" />
             </div>
-            <div class="image-box">
+            <div class="image-box" onclick="selecionarGola(this)">
               <img src="images/GolaRedonda.png" alt="GolaRedonda" />
             </div>
-            <div class="image-box">
+            <div class="image-box" onclick="selecionarGola(this)">
               <img src="images/GolaPolo.png" alt="GolaPolo" />
             </div>
           </div>
           <p>Escolha o tecido</p>
           <div class="tecidos">
-            <div class="image-box">
+            <div class="image-box" onclick="selecionarTecido(this)">
               <img src="images/Seda.png" alt="Seda" />
             </div>
-            <div class="image-box">
+            <div class="image-box" onclick="selecionarTecido(this)">
               <img src="images/Algodão.png" alt="Algodão" />
             </div>
-            <div class="image-box">
+            <div class="image-box" onclick="selecionarTecido(this)">
               <img src="images/Poliester.png" alt="Poliester" />
             </div>
           </div>
           <p>Imagem de referência</p>
           <input type="text" placeholder="Insira o link" />
           <div>
-            <button>Confirmar pedido</button>
+            <button onclick="fecharPedido()" disabled>Confirmar pedido</button>
           </div>
         </article>
       </section>
