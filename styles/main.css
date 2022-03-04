@@ -108,6 +108,7 @@ aside{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 footer{
@@ -139,6 +140,12 @@ footer{
     height: 236.47px;
     border-radius: 10px;
     background-color: #FFFFFF;
+}
+
+.imagemdacamisa{
+    width: 201.69px;
+    height: 236.47px;
+    border-radius: 10px;
     margin-right: 16.43px;
 }
 

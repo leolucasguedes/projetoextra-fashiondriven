@@ -12,47 +12,46 @@ const objeto = {
   author: `${nomedousuario}`,
 };
 
-function selecionarCamisa(div) {
+function selecionarCamisa(div, modelo) {
   const camisaselecionada = document.querySelector(".modelos .selecionado");
   if (camisaselecionada !== null) {
     camisaselecionada.classList.remove("selecionado");
-    objeto.model = camisaselecionada;
     liberado -= 1;
   }
   div.classList.add("selecionado");
   liberado += 1;
-  console.log(liberado);
+  console.log(liberado, modelo);
+  objeto.model = modelo;
 
   liberarBotao();
 }
 
-function selecionarGola(div) {
+function selecionarGola(div, gola) {
   const golaselecionada = document.querySelector(".golas .selecionado");
   if (golaselecionada !== null) {
     golaselecionada.classList.toggle("selecionado");
-    objeto.neck = golaselecionada;
     liberado -= 1;
   }
   div.classList.add("selecionado");
   liberado += 1;
-  console.log(liberado);
+  console.log(liberado, gola);
+  objeto.neck = gola;
 
   liberarBotao();
 }
 
-function selecionarTecido(div) {
+function selecionarTecido(div, tecido) {
   const tecidoselecionado = document.querySelector(".tecidos .selecionado");
   if (tecidoselecionado !== null) {
     tecidoselecionado.classList.remove("selecionado");
-    objeto.material = tecidoselecionado;
     liberado -= 1;
   }
   div.classList.add("selecionado");
   liberado += 1;
-  console.log(liberado);
+  console.log(liberado, tecido);
+  objeto.material = tecido;
 
   liberarBotao();
-  return tecidoselecionado;
 }
 
 function validarURL(url) {
@@ -65,13 +64,17 @@ function validarImagem() {
   const inputdaimagem = document.querySelector("input").value;
   if (validarURL(inputdaimagem) === true) {
     objeto.image = inputdaimagem;
-    liberado += 1;
   }
 }
 
+document.querySelector("input").addEventListener("change", (event) => {
+  liberado += 1;
+  console.log(liberado);
+});
+
 function liberarBotao() {
   let botao = document.querySelector("button");
-  if (liberado === 3) {
+  if (liberado === 4) {
     botao.disabled = false;
     botao.classList.add("liberado");
   } else {
@@ -80,6 +83,7 @@ function liberarBotao() {
 }
 
 function fecharPedido() {
+  validarImagem();
   alert("Pedido Confirmado!");
   enviarParaServidor();
 }
@@ -89,6 +93,7 @@ function enviarParaServidor() {
     "https://mock-api.driven.com.br/api/v4/shirts-api/shirts",
     objeto
   );
+  promisse.then(alert("Encomenda feita"));
   promisse.catch(alert("Ops, não conseguimos processar sua encomenda"));
 }
 
@@ -99,12 +104,24 @@ promessa.then(exibirCamisas);
 promessa.catch(tratarErro);
 
 function exibirCamisas(resposta) {
-  console.log(resposta.data);
-  let elementoImagem = document.querySelector(".imagem-da-camisa");
-  let elementoAuthor = document.querySelector(".author");
+  // console.log(resposta.data);
+  const container = document.querySelector(".camisas");
 
-  elementoImagem.src = resposta.data.image;
-  elementoAuthor.innerHTML = resposta.data.author;
+  for (let shirt of resposta.data) {
+    console.log(shirt);
+    container.innerHTML += `
+      <div class"camisa-box">
+        <img class="imagemdacamisa" src=${shirt.image} />
+        <p class="author"><strong>Criador: </strong>${shirt.owner}</p>
+      </div>`;
+  }
 }
 
 function tratarErro() {}
+
+/*function pedirCamisaPronta(){
+  const camisapronta = document.querySelector(".imagemdacamisa")
+  camisapronta.addEventListener("click", (event) => {
+    (confirm("Quer encomedar uma camisa como essa?!")
+)};
+}*/

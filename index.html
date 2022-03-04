@@ -24,37 +24,40 @@
         <article>
           <p>Escolha o modelo</p>
           <div class="modelos">
-            <div class="image-box" onclick="selecionarCamisa(this)">
+            <div class="image-box" onclick="selecionarCamisa(this, 't-shirt')">
               <img src="images/tshirt.png" alt="T-shirt" />
             </div>
-            <div class="image-box" onclick="selecionarCamisa(this)">
+            <div class="image-box" onclick="selecionarCamisa(this, 'long')">
               <img src="images/Camiseta.png" alt="Camiseta" />
             </div>
-            <div class="image-box" onclick="selecionarCamisa(this)">
+            <div class="image-box" onclick="selecionarCamisa(this, 'top-tank')">
               <img src="images/Mangalonga.png" alt="Mangalonga" />
             </div>
           </div>
           <p>Escolha a gola</p>
           <div class="golas">
-            <div class="image-box" onclick="selecionarGola(this)">
+            <div class="image-box" onclick="selecionarGola(this, 'v-neck')">
               <img src="images/GolaV.png" alt="GolaV" />
             </div>
-            <div class="image-box" onclick="selecionarGola(this)">
+            <div class="image-box" onclick="selecionarGola(this, 'round')">
               <img src="images/GolaRedonda.png" alt="GolaRedonda" />
             </div>
-            <div class="image-box" onclick="selecionarGola(this)">
+            <div class="image-box" onclick="selecionarGola(this, 'polo')">
               <img src="images/GolaPolo.png" alt="GolaPolo" />
             </div>
           </div>
           <p>Escolha o tecido</p>
           <div class="tecidos">
-            <div class="image-box" onclick="selecionarTecido(this)">
+            <div class="image-box" onclick="selecionarTecido(this, 'silk')">
               <img src="images/Seda.png" alt="Seda" />
             </div>
-            <div class="image-box" onclick="selecionarTecido(this)">
+            <div class="image-box" onclick="selecionarTecido(this, 'cotton')">
               <img src="images/Algodão.png" alt="Algodão" />
             </div>
-            <div class="image-box" onclick="selecionarTecido(this)">
+            <div
+              class="image-box"
+              onclick="selecionarTecido(this, 'polyester')"
+            >
               <img src="images/Poliester.png" alt="Poliester" />
             </div>
           </div>
@@ -72,16 +75,7 @@
     <footer>
       <div class="ultimos-pedidos">
         <p class="last-text">Últimos pedidos</p>
-        <div class="camisas">
-          <div class="camisa-box">
-            <img class="imagemdacamisa" src="" />
-            <p class="author"><strong>Criador:</strong></p>
-          </div>
-          <div class="camisa-box"></div>
-          <div class="camisa-box"></div>
-          <div class="camisa-box"></div>
-          <div class="camisa-box"></div>
-        </div>
+        <div class="camisas"></div>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
